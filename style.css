@@ -1,0 +1,219 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,200;0,400;0,600;1,200;1,400;1,600&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 62.5%;
+}
+
+body {
+  width: 100vw;
+  height: 100vh;
+  font-family: 'Poppins', serif;
+  font-size: 1.5rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 8rem 16.5rem;
+}
+
+.container {
+  /* background-color: green; */
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 64px;
+}
+
+.header {
+  max-width: 540px;
+  /* background-color: #549ef2; */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 16px;
+  color: #4d4f62;
+}
+
+.header-title {
+  font-size: 3.6rem;
+  font-weight: 200;
+  letter-spacing: 0.25px;
+}
+
+.header-text {
+  font-size: 3.6rem;
+  font-weight: 600;
+  letter-spacing: 0.25px;
+}
+
+.header-description {
+  text-align: center;
+  font-size: inherit;
+  line-height: 2.5rem;
+  letter-spacing: 0.1px;
+  font-weight: 400;
+}
+
+.cards {
+  width: 100%;
+  height: 100%;
+
+  display: grid;
+  gap: 30px;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: repeat(2, 1fr);
+  grid-template-areas:
+    'start mid1 end'
+    'start mid2 end';
+}
+
+.card-supervisor {
+  grid-area: start;
+  align-self: center;
+}
+
+.card-team-builder {
+  grid-area: mid1;
+}
+.card-karma {
+  grid-area: mid2;
+}
+.card-calculator {
+  grid-area: end;
+  align-self: center;
+}
+
+.card-supervisor {
+  border-radius: 0.5rem;
+  padding: 2.5rem 3rem;
+  margin-bottom: 3rem;
+  box-shadow: 0 1rem 2rem 0.5rem #dedede;
+  border-top: 0.5rem solid hsl(180, 62%, 55%);
+}
+
+.card-team-builder {
+  border-radius: 0.5rem;
+  padding: 2.5rem 3rem;
+  margin-bottom: 3rem;
+  box-shadow: 0 1rem 2rem 0.5rem #dedede;
+  border-top: 0.5rem solid hsl(0, 78%, 62%);
+}
+
+.card-karma {
+  border-radius: 0.5rem;
+  padding: 2.5rem 3rem;
+  margin-bottom: 3rem;
+  box-shadow: 0 1rem 2rem 0.5rem #dedede;
+  border-top: 0.5rem solid hsl(34, 97%, 64%);
+}
+
+.card-calculator {
+  border-radius: 0.5rem;
+  padding: 2.5rem 3rem;
+  margin-bottom: 3rem;
+  box-shadow: 0 1rem 2rem 0.5rem #dedede;
+  border-top: 0.5rem solid hsl(212, 86%, 64%);
+}
+
+.card-title {
+  margin: 0;
+  font-size: 2rem;
+  color: hsl(234, 12%, 34%);
+}
+
+.card-paragraph {
+  margin: 0;
+  font-size: 1.3rem;
+  color: hsl(229, 6%, 66%);
+}
+
+.card-image {
+  padding-top: 3rem;
+  display: flex;
+  justify-content: right;
+}
+
+@media (max-width: 1100px) {
+  .cards {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(2, 1fr);
+    grid-template-areas:
+      'start end '
+      'start1 end1 ';
+
+    column-gap: 3rem;
+  }
+
+  .card-supervisor {
+    grid-area: start;
+    align-self: normal;
+  }
+
+  .card-team-builder {
+    grid-area: end;
+  }
+  .card-karma {
+    grid-area: start1;
+  }
+  .card-calculator {
+    grid-area: end1;
+    align-self: normal;
+  }
+}
+
+@media (max-width: 800px) {
+  body {
+    height: max-content;
+    padding: 8.5rem 3.2rem;
+  }
+
+  .container {
+    gap: 72px;
+  }
+
+  .header-title {
+    font-size: 2.4rem;
+    letter-spacing: 0.17px;
+  }
+
+  .header-text {
+    font-size: 2.4rem;
+    letter-spacing: 0.17px;
+  }
+
+  .cards {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr;
+    grid-template-areas:
+      'start'
+      'start1'
+      'start2'
+      'start3';
+  }
+  .card-supervisor {
+    grid-area: start;
+  }
+
+  .card-team-builder {
+    grid-area: start1;
+  }
+  .card-karma {
+    grid-area: start2;
+  }
+  .card-calculator {
+    grid-area: start3;
+  }
+}
+
+@media (max-width: 665px) {
+}
